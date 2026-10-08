@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing – PrintEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="4" width="26" height="12" rx="2" fill="#dcecff" stroke="#0b63d6" stroke-width="3"/><rect x="3" y="15" width="42" height="21" rx="5" fill="#0b63d6"/><rect x="11" y="28" width="26" height="16" rx="2" fill="#fff" stroke="#0b63d6" stroke-width="3"/><circle cx="37" cy="22" r="2" fill="#fff"/></svg>
+      <span><b>Print<span>Ease</span></b><small>Printing Made Easier</small></span>
+    </a>
+    <div class="nav-right">
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="order.html" class="btn btn-blue">Order Now</a>
+    </div>
+  </div>
+</header>
+<section class="page-head"><div class="wrap"><h1>Pricing</h1><p>Prices are per page. Use the calculator to estimate your total.</p></div></section>
+
+<main class="wrap section">
+  <div class="main">
+    <section>
+      <h2>Price per Page</h2>
+      <table class="prices">
+        <tr><th colspan="2">Black &amp; White</th></tr><tr><td>Short</td><td>₱2</td></tr><tr><td>Long</td><td>₱3</td></tr><tr><td>A4</td><td>₱3</td></tr>
+        <tr><th colspan="2">Colored</th></tr><tr><td>Short</td><td>₱5</td></tr><tr><td>Long</td><td>₱5</td></tr><tr><td>A4</td><td>₱5</td></tr>
+      </table>
+    </section>
+    <section class="calc">
+      <h2>Printing Calculator</h2>
+      <div class="fields">
+        <div>
+          <label for="paper-size">Paper Size</label>
+          <select id="paper-size" py-change="calculate_total">
+            <option value="short">Short</option>
+            <option value="long">Long</option>
+            <option value="a4">A4</option>
+          </select>
+        </div>
+        <div>
+          <label for="print-type">Printing Type</label>
+          <select id="print-type" py-change="calculate_total">
+            <option value="bw">Black &amp; White</option>
+            <option value="color">Colored</option>
+          </select>
+        </div>
+        <div>
+          <label for="copies">Number of Copies</label>
+          <input type="number" id="copies" value="1" min="1" py-change="calculate_total">
+        </div>
+      </div>
+      <button type="button" class="btn btn-blue" py-click="calculate_total">Calculate Total</button>
+      <p class="error" id="calc-error" role="alert"></p>
+      <div class="result">Estimated Total:<strong id="total">₱0.00</strong></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><b>PrintEase</b><small>Printing Made Easier</small></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PrintEase. All rights reserved.</div>
+  </div>
+</footer>
+
+<script type="py" src="./printease.py"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home – PrintEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="4" width="26" height="12" rx="2" fill="#dcecff" stroke="#0b63d6" stroke-width="3"/><rect x="3" y="15" width="42" height="21" rx="5" fill="#0b63d6"/><rect x="11" y="28" width="26" height="16" rx="2" fill="#fff" stroke="#0b63d6" stroke-width="3"/><circle cx="37" cy="22" r="2" fill="#fff"/></svg>
+      <span><b>Print<span>Ease</span></b><small>Printing Made Easier</small></span>
+    </a>
+    <div class="nav-right">
+      <nav class="links">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="order.html" class="btn btn-blue">Order Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">WELCOME TO PRINTEASE</div>
+      <h1>Printing Made <span>Easy.</span></h1>
+      <p>Affordable, fast, and reliable printing for students and everyday documents.</p>
+      <div class="btns">
+        <a href="order.html" class="btn btn-blue">Order Now</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <svg viewBox="0 0 640 340" role="img" aria-label="Printer with paper coming out and a stack of paper">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#14171c"/></linearGradient>
+          <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9d3b4"/><stop offset="1" stop-color="#cfae82"/></linearGradient>
+        </defs>
+        <!-- desk -->
+        <rect x="0" y="290" width="640" height="50" fill="url(#desk)"/>
+        <ellipse cx="300" cy="296" rx="230" ry="8" fill="#000" opacity=".12"/>
+        <!-- plant -->
+        <g transform="translate(205 40)">
+          <path d="M40 100 C20 70 10 40 30 10 C45 35 52 70 40 100Z" fill="#4c8f3e"/>
+          <path d="M42 100 C55 65 75 45 95 40 C90 70 70 95 42 100Z" fill="#5fa84c"/>
+          <path d="M38 100 C20 85 0 80 -12 60 C15 58 35 70 38 100Z" fill="#3f7d34"/>
+          <path d="M42 100 C50 70 50 40 62 22 C75 50 66 80 42 100Z" fill="#6bb957"/>
+          <path d="M14 98h56l-7 50H21z" fill="#f5f5f2"/>
+        </g>
+        <!-- printer body -->
+        <path d="M250 150 L520 150 L545 195 L545 285 L250 285Z" fill="url(#body)"/>
+        <path d="M250 150 L520 150 L545 195 L275 195Z" fill="#4a5059"/>
+        <rect x="275" y="195" width="270" height="12" fill="#0d0f12"/>
+        <!-- control panel -->
+        <rect x="470" y="212" width="52" height="14" rx="3" fill="#2a2e35"/>
+        <circle cx="482" cy="219" r="3" fill="#3ddc84"/>
+        <circle cx="496" cy="219" r="3" fill="#6b7280"/>
+        <!-- paper coming out -->
+        <path d="M280 205 L505 205 L470 295 L215 295Z" fill="#fff" stroke="#d5deea"/>
+        <g stroke="#9fb3cc" stroke-width="3" opacity=".8">
+          <line x1="285" y1="222" x2="440" y2="222"/><line x1="275" y1="236" x2="430" y2="236"/>
+          <line x1="262" y1="250" x2="415" y2="250"/><line x1="250" y1="264" x2="355" y2="264"/>
+        </g>
+        <!-- paper stack -->
+        <g>
+          <path d="M520 255 L625 240 L640 258 L535 275Z" fill="#fff" stroke="#cdd9e8"/>
+          <path d="M520 255 L535 275 L535 292 L520 272Z" fill="#e3ebf5"/>
+          <path d="M535 275 L640 258 L640 275 L535 292Z" fill="#f3f7fc" stroke="#cdd9e8"/>
+          <path d="M522 240 L624 226 L638 242 L536 256Z" fill="#fff" stroke="#cdd9e8"/>
+          <path d="M524 226 L622 212 L636 228 L538 242Z" fill="#fff" stroke="#cdd9e8"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="benefits">
+    <div class="benefit">
+      <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg></div>
+      <div><h3>Affordable Prices</h3><p>Student-friendly printing prices.</p></div>
+    </div>
+    <div class="benefit">
+      <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+      <div><h3>Fast Service</h3><p>Reduce waiting time and get your documents quickly.</p></div>
+    </div>
+    <div class="benefit">
+      <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div><h3>Reliable Quality</h3><p>Clear and consistent printing.</p></div>
+    </div>
+  </section>
+
+  <div class="main">
+    <section>
+      <h2>Popular Printing Services</h2>
+      <div class="services">
+        <div class="service"><div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg></div><h3>Black &amp; White Printing</h3><p>Crisp and clear prints for your documents.</p></div>
+        <div class="service"><div class="icon-circle"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="5" stroke="#e5484d"/><circle cx="15" cy="9" r="5" stroke="#2f9e44"/><circle cx="12" cy="15" r="5"/></svg></div><h3>Colored Printing</h3><p>Vibrant colors for your projects and presentations.</p></div>
+        <div class="service"><div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></svg></div><h3>School Documents</h3><p>Forms, requirements, and school papers.</p></div>
+        <div class="service"><div class="icon-circle"><svg viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.500M22 9v6"/></svg></div><h3>Research Papers</h3><p>High-quality prints for your research needs.</p></div>
+      </div>
+      <a href="services.html" class="btn btn-outline more">View All Services</a>
+    </section>
+    <section class="calc">
+      <h2>Printing Calculator</h2>
+      <div class="fields">
+        <div>
+          <label for="paper-size">Paper Size</label>
+          <select id="paper-size" py-change="calculate_total">
+            <option value="short">Short</option>
+            <option value="long">Long</option>
+            <option value="a4">A4</option>
+          </select>
+        </div>
+        <div>
+          <label for="print-type">Printing Type</label>
+          <select id="print-type" py-change="calculate_total">
+            <option value="bw">Black &amp; White</option>
+            <option value="color">Colored</option>
+          </select>
+        </div>
+        <div>
+          <label for="copies">Number of Copies</label>
+          <input type="number" id="copies" value="1" min="1" py-change="calculate_total">
+        </div>
+      </div>
+      <button type="button" class="btn btn-blue" py-click="calculate_total">Calculate Total</button>
+      <p class="error" id="calc-error" role="alert"></p>
+      <div class="result">Estimated Total:<strong id="total">₱0.00</strong></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><b>PrintEase</b><small>Printing Made Easier</small></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PrintEase. All rights reserved.</div>
+  </div>
+</footer>
+
+<script type="py" src="./printease.py"></script>
+</body>
+</html>

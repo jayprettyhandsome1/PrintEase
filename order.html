@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Now – PrintEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.11.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="4" width="26" height="12" rx="2" fill="#dcecff" stroke="#0b63d6" stroke-width="3"/><rect x="3" y="15" width="42" height="21" rx="5" fill="#0b63d6"/><rect x="11" y="28" width="26" height="16" rx="2" fill="#fff" stroke="#0b63d6" stroke-width="3"/><circle cx="37" cy="22" r="2" fill="#fff"/></svg>
+      <span><b>Print<span>Ease</span></b><small>Printing Made Easier</small></span>
+    </a>
+    <div class="nav-right">
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="order.html" class="active">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="order.html" class="btn btn-blue">Order Now</a>
+    </div>
+  </div>
+</header>
+<section class="page-head"><div class="wrap"><h1>Order Now</h1><p>Fill out the form to send your printing order request.</p></div></section>
+
+<main class="wrap section">
+  <div class="order-box">
+    <p class="proto">School project prototype: no real payment, email, or database is connected.</p>
+    <form id="order-form" novalidate py-submit="submit_order">
+      <div class="grid2">
+        <div><label for="o-name">Full Name</label><input type="text" id="o-name" placeholder="Juan Dela Cruz"></div>
+        <div><label for="o-contact">Contact Number</label><input type="text" id="o-contact" inputmode="numeric" maxlength="11" placeholder="09123456789" py-input="clean_contact"></div>
+        <div><label for="o-size">Paper Size</label>
+          <select id="o-size" py-change="update_estimate">
+            <option value="">Select paper size</option>
+            <option value="short">Short</option><option value="long">Long</option><option value="a4">A4</option>
+          </select></div>
+        <div><label for="o-type">Printing Type</label>
+          <select id="o-type" py-change="update_estimate">
+            <option value="">Select printing type</option>
+            <option value="bw">Black &amp; White</option><option value="color">Colored</option>
+          </select></div>
+        <div><label for="o-copies">Number of Copies</label><input type="number" id="o-copies" min="1" placeholder="1" py-input="update_estimate"></div>
+        <div class="estimate">Estimated Total:<strong id="o-estimate">₱0.00</strong></div>
+      </div>
+      <div class="file-field">
+        <label for="o-file">Printing File</label>
+        <input type="file" id="o-file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" py-change="show_file_name">
+        <p class="file-name">Selected file: <span id="file-name">No file selected</span></p>
+        <p class="hint">PDF, DOC, DOCX, JPG, JPEG, or PNG. The file is not uploaded anywhere (prototype).</p>
+      </div>
+      <label for="o-notes">Special Instructions</label>
+      <textarea id="o-notes" rows="3" placeholder="Optional: page range, double-sided, stapling..."></textarea>
+      <p class="error" id="order-error" role="alert"></p>
+      <div class="btns">
+        <button type="submit" class="btn btn-blue">Submit Order</button>
+        <button type="button" class="btn btn-outline" py-click="clear_form">Clear Form</button>
+      </div>
+    </form>
+    <div class="confirm" id="order-result" hidden>
+      <h2>Order Request Submitted!</h2>
+      <dl>
+        <dt>Customer Name</dt><dd id="r-name"></dd>
+        <dt>Contact Number</dt><dd id="r-contact"></dd>
+        <dt>Printing File</dt><dd id="r-file"></dd>
+        <dt>Paper Size</dt><dd id="r-size"></dd>
+        <dt>Printing Type</dt><dd id="r-type"></dd>
+        <dt>Number of Copies</dt><dd id="r-copies"></dd>
+        <dt>Estimated Total</dt><dd id="r-total"></dd>
+      </dl>
+      <p>Please bring or submit your document to the PrintEase service point.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><b>PrintEase</b><small>Printing Made Easier</small></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 PrintEase. All rights reserved.</div>
+  </div>
+</footer>
+
+<script type="py" src="./printease.py"></script>
+</body>
+</html>
